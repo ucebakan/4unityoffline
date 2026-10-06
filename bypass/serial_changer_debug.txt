@@ -1,0 +1,130 @@
+=== SERIAL CHANGER DEBUG LOG ===
+
+
+----[ STARTUP ]----
+15:06:13.399  [INFO] Debug mode: ENABLED
+15:06:13.399  [INFO] Admin: YES
+
+----[ LOGIN ]----
+15:06:16.177  [STEP] Initializing authentication
+15:06:19.093  [ OK ] Authentication initialized
+15:06:19.093  [STEP] Logging in
+15:06:19.807  [ OK ] Login successful
+
+----[ READING SERIALS ]----
+15:06:20.357  [INFO] Disk Serial read: 0000_0000_0100_0000_E4D2_5CDA_8C7A_5401.
+15:06:20.367  [ OK ] Serial read complete
+
+----[ APPLY ALL BEGIN ]----
+15:06:51.346  [INFO] Admin: YES
+
+----[ DOWNLOAD ]----
+15:06:51.348  [STEP] Downloading driver package...
+15:06:53.136  [ OK ] Download complete
+
+----[ EXTRACT ]----
+15:06:54.045  [ OK ] Extract complete
+
+----[ FIND FILES ]----
+15:06:54.046  [ OK ] AMIDE tool found: C:\ks1\AMITools\AMIDEWINx64.EXE
+15:06:54.046  [ OK ] Target driver found: C:\ks1\AMITools\sdeven.sys
+
+----[ DRIVER INSTALL ]----
+15:06:54.048  [STEP] Stopping existing service
+15:06:56.115  [STEP] Deleting old service
+15:06:58.208  [STEP] Creating service
+15:06:58.761  [STEP] Starting service
+15:06:58.815         SC START output: 
+SERVICE_NAME: KernelSpoofer1 
+        TYPE               : 1  KERNEL_DRIVER  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 0
+        FLAGS              : 
+
+15:07:00.371         SC QUERY output: 
+SERVICE_NAME: KernelSpoofer1 
+        TYPE               : 1  KERNEL_DRIVER  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+15:07:00.373  [ OK ] Service started successfully
+15:07:00.374  [ OK ] Handshake result: OK
+
+----[ APPLY SMBIOS ]----
+15:07:02.380  [STEP] Applying Baseboard SN with value: VPG594XE8V7L
+15:07:02.500  [ERR!] Baseboard SN FAILED
+15:07:02.501         Tool output: +---------------------------------------------------------------------------+
+|                       AMIDEWIN64 Utility v5.20.0042                       |
+|      Copyright (C)2017 American Megatrends Inc. All Rights Reserved.      |
++---------------------------------------------------------------------------+
+
+Initializing the SMBIOS interface.  Please wait a moment......
+Error: Fail to initialize SMBIOS.
+d7 - Error: DMI Data write failed.
+
+15:07:02.502  [STEP] Applying System UUID with value: FA83606F-C25E-40D3-94AE-F8EED4E2ED98
+15:07:02.558  [ERR!] System UUID FAILED
+15:07:02.559         Tool output: +---------------------------------------------------------------------------+
+|                       AMIDEWIN64 Utility v5.20.0042                       |
+|      Copyright (C)2017 American Megatrends Inc. All Rights Reserved.      |
++---------------------------------------------------------------------------+
+
+Initializing the SMBIOS interface.  Please wait a moment......
+Error: Fail to initialize SMBIOS.
+d7 - Error: DMI Data write failed.
+
+15:07:02.560  [STEP] Applying CPU Serial with value: E0A72CAEB757E449
+15:07:02.619  [ERR!] CPU Serial FAILED
+15:07:02.620         Tool output: +---------------------------------------------------------------------------+
+|                       AMIDEWIN64 Utility v5.20.0042                       |
+|      Copyright (C)2017 American Megatrends Inc. All Rights Reserved.      |
++---------------------------------------------------------------------------+
+
+Initializing the SMBIOS interface.  Please wait a moment......
+Error: Fail to initialize SMBIOS.
+d7 - Error: DMI Data write failed.
+
+15:07:02.621  [STEP] Applying System Serial with value: PV6V43WE92S5
+15:07:02.680  [ERR!] System Serial FAILED
+15:07:02.681         Tool output: +---------------------------------------------------------------------------+
+|                       AMIDEWIN64 Utility v5.20.0042                       |
+|      Copyright (C)2017 American Megatrends Inc. All Rights Reserved.      |
++---------------------------------------------------------------------------+
+
+Initializing the SMBIOS interface.  Please wait a moment......
+Error: Fail to initialize SMBIOS.
+d7 - Error: DMI Data write failed.
+
+
+----[ REGISTRY ]----
+15:07:02.689  [ OK ] MachineGuid applied: A133FB15-4CA0-4972-886B-64C32DE22A93
+15:07:02.691  [ OK ] ComputerName applied: Alı
+15:07:02.692  [ OK ] NV Hostname applied: Ali
+15:07:02.694  [ OK ] ProductId applied: 41776-77034-05613-37477
+
+----[ DISK SERIAL VERIFICATION ]----
+15:07:04.716  [INFO] Old Disk Serial: 0000_0000_0100_0000_E4D2_5CDA_8C7A_5401.
+15:07:04.717  [INFO] New Disk Serial: EGJ8K07C0
+15:07:04.718  [ OK ] Disk serial CHANGED successfully
+
+----[ WMI RESTART ]----
+15:07:08.425  [ OK ] WMI restart complete
+
+----[ RESULT ]----
+15:07:08.426  [WARN] Completed with warnings/errors
+
+----[ READING SERIALS ]----
+15:07:21.812  [INFO] Disk Serial read: EGJ8K07C0
+15:07:21.836  [ OK ] Serial read complete
+15:07:30.056  [INFO] Application closing
+
+=== END ===
